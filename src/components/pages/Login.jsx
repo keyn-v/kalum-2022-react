@@ -23,12 +23,12 @@ export default function Login() {
     });
 
 
-    const login = ({ email, password }) => {
+    const login = ({ username, password }) => {
         const errores = {};
         setErrores(errores);
 
-        if (!validator.isEmail(email)) {
-            errores.email = 'El correo electronico es invalido';
+        if (validator.isEmpty(username)) {
+            errores.username = 'El username es invalido';
         }
 
         if (validator.isEmpty(password)) {
@@ -42,14 +42,15 @@ export default function Login() {
 
         // Llamada a la api de autentiacion
 
-        dispath(loginUser({email, password})).then(response => {
-            /*Swal.fire({
+        dispath(loginUser({username, password})).then(response => {
+            console.log(response);
+            Swal.fire({
                 position: 'center',
                 icon: 'success',
                 title: 'Inicio de sesion exitoso',
                 showconfirmButton: false,
                 timer: 1500
-            })*/
+            })
         }).catch(error => {
             console.log(error);
         });
@@ -63,7 +64,7 @@ export default function Login() {
                         <h3>Iniciar sesion</h3>
                         <hr></hr>
                         <SigninForm errores={errores} onSubmitCallback={login}></SigninForm>
-                        <div className='mt3'>
+                        <div className='mt-3'>
                             <Link to={"/register"}>Ya tienes una cuenta?, crea una aqui</Link>
                         </div>
                     </Card>

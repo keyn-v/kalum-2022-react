@@ -63,7 +63,7 @@ export const SignUpForm = ({errores, onSubmitCallback}) => {
                 </Form.Group>
             </Col>
         </Row>
-        <Button variant="primary" type="submit" className='mt3'>Crear Cuenta</Button>
+        <Button variant="primary" type="submit" className='mt-3'>Crear Cuenta</Button>
     </Form>
   )
 }

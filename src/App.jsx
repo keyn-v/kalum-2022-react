@@ -4,6 +4,7 @@ import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import CarrerasTecnicas from './components/pages/CarrerasTecnicas';
 import Home from './components/pages/Home';
+import Jornadas from './components/pages/Jornadas';
 
 export default function App() {
 
@@ -17,6 +18,7 @@ export default function App() {
         <Route exact path='/login' element={<Login/>}></Route>
         <Route exact path='/register' element={<Register/>}></Route>        
         <Route exact path='/carrerasTecnicas' element={<CarrerasTecnicas/>}></Route>
+        <Route exact path='/jornadas' element={<Jornadas/>}></Route>
         <Route exact path='/' element={<Home/>}></Route>
       </Routes>
     </Router>

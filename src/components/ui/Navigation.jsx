@@ -11,12 +11,13 @@ export default function Navigation() {
   const dispatch = useDispatch();
 
   return (
-    <Container>
-      <Navbar bg='dark' variant='dark' expand='xl'>
+    <Navbar bg='dark' variant='dark' expand='lg'>
+      <Container>
         <Navbar.Brand as={NavLink} to="/">Kalum</Navbar.Brand>
         <Navbar.Collapse id='main-menu'>
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to='/carrerasTecnicas'>Carreras Tecnicas</Nav.Link>
+            <Nav.Link as={NavLink} to='/jornadas'>Jornadas</Nav.Link>
           </Nav>
           {!loggedIn ? (
             <Nav>
@@ -36,12 +37,9 @@ export default function Navigation() {
 
             )
           }
-
-
-
-
         </Navbar.Collapse>
-      </Navbar>
-    </Container>
+
+      </Container>
+    </Navbar>
   )
 }

@@ -15,7 +15,7 @@ const Cartas = () => {
         </Row>
       <Row className='px-4 my-5'>
         <Card style={{ width: '30rem' }} >
-        <Card.Img variant="center" src="https://pokerstarscareers.com/wp-content/uploads/2022/03/iStock-1254577026-400x400.jpg" />
+        <Card.Img variant="center" src="https://definicion.xyz/wp-content/uploads/2020/11/electronica-industrial-700x438.jpg" />
         <Card.Body>
           <Card.Title>Electronica Industrial</Card.Title>
           <Card.Text>
@@ -63,8 +63,8 @@ const Cartas = () => {
         </Card.Body>
       </Card>
       </Row> 
-      <footer class="py-5 bg-dark">
-        <p class="text-center text-white">
+      <footer className="py-5 bg-dark">
+        <p className="text-center text-white">
           Copyright &copy;Kalum 2022
         </p>
       </footer>
